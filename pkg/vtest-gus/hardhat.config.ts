@@ -28,7 +28,11 @@ export default {
   },
     networks: {
     hardhat: {
-      allowUnlimitedContractSize: true
+      allowUnlimitedContractSize: true,
+      chainId:42,
+      forking:{
+        url: "https://kovan.infura.io/v3/025d7ebf96134012b954d0491f384c53",
+      },
     },
     rinkeby: {
       allowUnlimitedContractSize: true,
