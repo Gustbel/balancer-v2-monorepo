@@ -28,6 +28,9 @@ export default {
     admin: '0x17b11FF13e2d7bAb2648182dFD1f1cfa0E4C7cf3',
   },
   goerli: {
-    admin: '0xE0a171587b1Cae546E069A943EDa96916F5EE977',
+    admin: '0xdd7069963Ac79E5D879C9Cc9Fd7131Ba822609C3',
+  },
+  fantomtestnet: {
+    admin: '0xdd7069963Ac79E5D879C9Cc9Fd7131Ba822609C3',
   },
 };
