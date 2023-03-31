@@ -5,7 +5,7 @@ export { Artifact, Libraries } from 'hardhat/types';
 
 import Task from './task';
 
-export const NETWORKS = ['goerli', 'mainnet', 'polygon', 'arbitrum', 'optimism', 'gnosis', 'bsc', 'avalanche'];
+export const NETWORKS = ['goerli', 'fantomtestnet', 'mainnet', 'polygon', 'arbitrum', 'optimism', 'gnosis', 'bsc', 'avalanche'];
 
 export type Network = typeof NETWORKS[number];
 

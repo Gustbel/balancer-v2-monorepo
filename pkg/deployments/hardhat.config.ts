@@ -247,4 +247,19 @@ export default {
     sources: './tasks',
   },
   warnings: hardhatBaseConfig.warnings,
+  networks: {
+    goerli: {
+      url: "https://rpc.ankr.com/eth_goerli",
+      accounts: ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+    },
+    fantomtestnet: {
+      url: "https://fantom-testnet.public.blastapi.io",
+      accounts: ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+    },
+  },
+  "defaultConfig": {
+    "gasPrice": "auto",
+    "gasMultiplier": 1,
+    "accounts": ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+  }
 };
