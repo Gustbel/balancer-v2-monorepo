@@ -6,6 +6,9 @@ import 'hardhat-ignore-warnings';
 
 import '@balancer-labs/v2-common/setupTests';
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { task } from 'hardhat/config';
 import { TASK_TEST } from 'hardhat/builtin-tasks/task-names';
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
@@ -249,17 +252,16 @@ export default {
   warnings: hardhatBaseConfig.warnings,
   networks: {
     goerli: {
-      url: "https://rpc.ankr.com/eth_goerli",
-      accounts: ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+      url: process.env.GOERLI_URL,
+      accounts: [process.env.GOERLI_PRIVATE_KEY_1]
     },
     fantomtestnet: {
-      url: "https://fantom-testnet.public.blastapi.io",
-      accounts: ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+      url: process.env.FANTOMTESTNET_URL,
+      accounts: [process.env.FANTOMTESTNET_PRIVATE_KEY_1]
     },
   },
   "defaultConfig": {
     "gasPrice": "auto",
-    "gasMultiplier": 1,
-    "accounts": ["0xc352489e7a190b6fdfbf17d70089d04a0fd4bfb94835b70895a2eb811127cb69"]
+    "gasMultiplier": 1
   }
 };
